@@ -10,6 +10,9 @@ import { ScrollViewRN } from './corecomponents/ScollViewComponent';
 import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
+import { LayoutCodeEvol } from './layout/26_CodeSetup';
+import { Flex } from './layout/Flex';
+import { FlexDirectionBasics } from './layout/FlexDirection';
 import { BoxModelRN } from './styles/BoxModel';
 import { BoxShadowRN } from './styles/BoxShadow';
 import FlexDimensionsBasics, { FixedDimensionsBasics, PercentageDimensionsBasics } from './styles/HeightAndWidthStyle';
@@ -56,6 +59,13 @@ export default function App() {
     // <MultipleStyles></MultipleStyles>
     // <BoxModelRN></BoxModelRN>
     // <BoxShadowRN/>
-    <StyleInheritance/>
+    // <StyleInheritance/>
+
+    /*
+    * FlexBox
+    */
+  //  <LayoutCodeEvol></LayoutCodeEvol>
+  //  <Flex></Flex>
+   <FlexDirectionBasics/>
   );
 };

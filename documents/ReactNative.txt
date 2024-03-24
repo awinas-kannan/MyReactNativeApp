@@ -339,18 +339,68 @@ If this Buttonton doesn't look right for your app, you can build your own button
  ##Check the Style sheet docs in RN Docs (Yet to do)
 
  25 : Layout with Flexbox
+ https://reactnative.dev/docs/flexbox
+ A component can specify the layout of its children using the Flexbox algorithm. Flexbox is designed to provide a consistent layout on different screen sizes.
 
+Flexbox works the same way in React Native as it does in CSS on the web, with a few exceptions. The defaults are different, with flexDirection defaulting to column instead of row, alignContent defaulting to flex-start instead of stretch, flexShrink defaulting to 0 instead of 1, the flex parameter only supporting a single number.
+
+flex 1 , flex 2 , flex 3
+1/6 ; 2/6 ; 3 /6
+
+Default values :
+flexDirection -> column instead of row, 
+alignContent -> flex-start instead of stretch, 
+flexShrink ->  0 instead of 1, 
+the flex parameter only supporting a single number.
+
+Flex BoxHas 2 items :
+ -> Flex Container
+ -> Flex items
+
+ <View> -> Flex Container
+   <View>1</View> -> Flex Item
+   <View>2</View>
+ </View>
+
+ Axes:
+  -> main Axis ( Top to Bottom )
+  -> Cross Axis (Left to Right)
 
  26 : Code Setup
+ 26_CodeSetup.js
 
  27 : Flex
+ View by Default has flex. (Created based on children)
+ If no children, it will not be visible.
+ To occupy th whole screen use flex :1 .
+ 
+ If no flex is added , then only the existin prop of box is considered.. 
 
  28 : Flex Direction
+      column 
+      column-reverse
+      row
+      row-reverse
 
  29 : Justify Content
 
  30 : Align Items
+ 
+ 31 : Align Self
 
+ 32 : Flex Wrap
+
+ 33 : Aligh Content
+
+ 34 : Gap
+
+ 35 : Flex Basics
+
+ 36 : Flex Shrint
+
+ 37 : Flex Grow
+
+ 38 : relative and absolute layout
  
 
 
