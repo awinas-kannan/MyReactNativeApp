@@ -13,6 +13,7 @@ import { ViewCompRN } from './corecomponents/ViewComponent';
 import { LayoutCodeEvol } from './layout/26_CodeSetup';
 import { Flex } from './layout/Flex';
 import { FlexDirectionBasics } from './layout/FlexDirection';
+import { JustifyContentBasics } from './layout/JustifyContent';
 import { BoxModelRN } from './styles/BoxModel';
 import { BoxShadowRN } from './styles/BoxShadow';
 import FlexDimensionsBasics, { FixedDimensionsBasics, PercentageDimensionsBasics } from './styles/HeightAndWidthStyle';
@@ -66,6 +67,9 @@ export default function App() {
     */
   //  <LayoutCodeEvol></LayoutCodeEvol>
   //  <Flex></Flex>
-   <FlexDirectionBasics/>
+  //  <FlexDirectionBasics/>
+
+    <JustifyContentBasics></JustifyContentBasics>
+
   );
 };

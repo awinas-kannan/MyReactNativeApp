@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-export const FlexDirectionBasics = () => {
-    const [flexDirection, setflexDirection] = useState('column');
+export const JustifyContentBasics = () => {
+    const [justifyContent, setJustifyContent] = useState('flex-start');
 
     return (
         <PreviewLayout
-            label="flexDirection"
-            values={['column', 'row', 'row-reverse', 'column-reverse']}
-            selectedValue={flexDirection}
-            setSelectedValue={setflexDirection}>
-            <View style={[styles.box, { backgroundColor: 'powderblue' }]} ><Text style={{ textAlign: 'center' }}>1</Text></View>
-            <View style={[styles.box, { backgroundColor: 'skyblue' }]} ><Text style={{ textAlign: 'center' }}>2</Text></View>
-            <View style={[styles.box, { backgroundColor: 'steelblue' }]} ><Text style={{ textAlign: 'center' }}>3</Text></View>
+            label="justifyContent"
+            selectedValue={justifyContent}
+            values={[
+                'flex-start',
+                'flex-end',
+                'center',
+                'space-between',
+                'space-around',
+                'space-evenly',
+            ]}
+            setSelectedValue={setJustifyContent}>
+            <View style={[styles.box, { backgroundColor: 'powderblue' }]} ><Text style={{ textAlign: 'center', marginTop: 20, fontSize: 25 }}>1</Text></View>
+            <View style={[styles.box, { backgroundColor: 'skyblue' }]} ><Text style={{ textAlign: 'center', marginTop: 20, fontSize: 25 }}>2</Text></View>
+            <View style={[styles.box, { backgroundColor: 'steelblue' }]} ><Text style={{ textAlign: 'center', marginTop: 20, fontSize: 25 }}>3</Text></View>
         </PreviewLayout>
     );
 };
@@ -24,7 +31,7 @@ const PreviewLayout = ({
     selectedValue,
     setSelectedValue,
 }) => (
-    <View style={{ padding: 50, flex: 1 }}>
+    <View style={{ padding: 10, flex: 1 }}>
         <Text style={styles.label}>{label}</Text>
         <View style={styles.row}>
             {values.map(value => (
@@ -53,7 +60,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'aliceblue',
     },
     box: {
-        // flex :1 ,
         width: 100,
         height: 100,
     },
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     selected: {
-        backgroundColor: 'lightgreen',
+        backgroundColor: 'coral',
         borderWidth: 0,
     },
     buttonLabel: {
