@@ -10,6 +10,11 @@ import { ScrollViewRN } from './corecomponents/ScollViewComponent';
 import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
+import { BoxModelRN } from './styles/BoxModel';
+import { BoxShadowRN } from './styles/BoxShadow';
+import FlexDimensionsBasics, { FixedDimensionsBasics, PercentageDimensionsBasics } from './styles/HeightAndWidthStyle';
+import { MultipleStyles } from './styles/MultipleStyles';
+import { StyleInheritance } from './styles/StyleInheritance';
 
 export default function App() {
 
@@ -33,10 +38,24 @@ export default function App() {
     // <StatusBarRN/>
     // <ActivityIndicatorRN></ActivityIndicatorRN>
     // <AlertAPIComponent />
-    <>
-      <GreetArrowCompo name="Awinas"></GreetArrowCompo>
-      <GreetFuncComp name="Kannan"></GreetFuncComp>
-    </>
 
+    // <>
+    //   <GreetArrowCompo name="Awinas"></GreetArrowCompo>
+    //   <GreetFuncComp name="Kannan"></GreetFuncComp>
+    // </>
+
+
+    /*
+     * Styles and StyleSheet API
+     */
+
+    // <FixedDimensionsBasics></FixedDimensionsBasics>
+    // <FlexDimensionsBasics/>
+    // <PercentageDimensionsBasics/>
+
+    // <MultipleStyles></MultipleStyles>
+    // <BoxModelRN></BoxModelRN>
+    // <BoxShadowRN/>
+    <StyleInheritance/>
   );
 };

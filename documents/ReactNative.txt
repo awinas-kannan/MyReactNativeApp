@@ -244,15 +244,114 @@ If this Buttonton doesn't look right for your app, you can build your own button
  19 : Styling
  
  https://reactnative.dev/docs/style
+ https://reactnative.dev/docs/stylesheet
 
  RN Doesnot use CSS for styling
  You style using JS
  names are written in camel case
  Ex : backgroundColor instead of background-color
+ 
+   Styling Approach:
+    -> Inline style (Non Recomended)
+    -> StyleSheet API
+
+  -> Styling various core components
+  -> Styling across iOS and Android
+ 
+ https://reactnative.dev/docs/height-and-width
+ Doc : HeightAndWidth.js
+ Fixed Dimensions:
+ The general way to set the dimensions of a component is by adding a fixed width and height to style. All dimensions in React Native are unitless, and represent density-independent pixels.
+
+ There is no universal mapping from points to physical units of measurement. This means that a component with fixed dimensions might not have the same physical size, across different devices and screen sizes. However, this difference is unnoticeable for most use cases.
+
+
 
 
  20 : StyleSheet API
+  A StyleSheet is an abstraction similar to CSS StyleSheets
+  
+  Why Style Sheet API:
+   * Reusable /Oraganized /Easy to read / maintainable code
+   * Move the inline styles to style sheet api and name it like (container / title) and use it in diff other components.
+   This avoids duplication
+   * When there are more number of styles to be added for compoentn ,inline style will not look good. So prefer Stylesheet api
+   
+ 21 : Multiple styles
+     Extract the common styles
 
+     you can also pass an array of styles - the last style in the array has precedence, so you can use this to inherit styles. 
+     {[styles.lightGreenBox,styles.box]
+     if you have some bordercolor in lightGreenBox,
+     It will be overridden by styles.box
+
+ 22 : Box Model
+ Margin 
+   Border
+     Padding
+       Content
+
+ Margin property will give margin every side of the section. marginHorizontal in this case will give margin left and right in short X axis. Lastly marginVertical is responsible for margin Top and Bottom which in a word margin Y axis
+
+ In RN , All dimensions are unitless and represent density independent pixels
+ 
+ width , height can be in percentage
+ Additionllay we can use paddingTop , bottomHorizontal .... 
+
+  paddingHorizontal applies padding to the left and right sides of the element.
+  It is equivalent to setting both paddingLeft and paddingRight to the same value.
+  This property is useful when you want to add equal padding to the left and right sides of an element without affecting its top and bottom padding.
+
+  BorderRadius Works in View Component in Both Platforms
+  In text , BorderRadius Works in Android not in ios
+  
+
+ 23 : Shadow and elevation 
+ In Web, We specify box-shadow : h-offset, v-offset , blur , spread , color
+ 
+ Shadow differs b/w Ios and android.
+ In Android Elevation
+
+ 24 : Style Inheritance
+
+ IN CSS , Setting style in DIV will be applied to nested childs <p> tags
+ <div>
+   <p> </p> 
+ </div>
+ P inhertis from Div
+
+ In RN , Its not possible.
+ <View>
+  <Text>
+  </Text>
+ </View>
+
+ Text will not inherti from view
+
+ https://reactnative.dev/docs/text#limited-style-inheritance
+ React Native still has the concept of style inheritance, but limited to text subtrees.
+ Following Style inheritance is possible
+ <Text>
+  <Text>
+  </Text>
+ </Text> 
+
+ ##Check the Style sheet docs in RN Docs (Yet to do)
+
+ 25 : Layout with Flexbox
+
+
+ 26 : Code Setup
+
+ 27 : Flex
+
+ 28 : Flex Direction
+
+ 29 : Justify Content
+
+ 30 : Align Items
+
+ 
 
 
 
