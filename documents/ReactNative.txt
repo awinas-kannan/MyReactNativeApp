@@ -1,0 +1,259 @@
+React Native:
+
+Code Evolution Channel :
+
+1: 
+
+React Fundementals and advanced concepts
+React Hooks
+react Typescript
+React redux
+React Router
+React Testing
+react Material UI
+React Styles Components
+React Storybook
+React Query
+React Table
+React Formik
+React Hook Form
+React Render
+
+
+What is React Naive:
+   Its a Open Source Framework For building native Android and Ios Apps (Cross platform) using React [Developed by META]
+   Using JS, We can access platform specific APIs (Such as Camera and Push Notifiacation)
+   Uses React Components to define the apperance and behaviour of User Interface
+   React itslef is a library designed for building user interfaces
+   For Web apps -> react - dom
+   For Android Apps -> react - native
+
+Why react native ?
+   iOS Apps require Swift or Objective-c
+   Android apps require Java or Kotlin
+
+   31% use ios and 68 % use android, So u need to develop 2 seperat apps using differnet technology
+
+   With react native, You can create app that works seamlessly on both platforms
+   Single team saving time and costs and maintenenace.
+   If team knows react , thier expertise can extent to web app development as well
+
+Prerequisites:
+   Java script 
+   React fundementas of react
+    Function components
+    States
+    Props
+    JSX
+    Hooks
+
+
+
+
+
+2 : Expo vs React native
+    Expo is open source framework maintained by Expo Itself ( designed for building cross platform apps)
+
+    Expo Proviced a sreamlined experience Unlike RN whihc can be challenging and time consuming to set up
+    Expo has tools & Services build aroung RN , which simplifies the dev process
+    With Plain RN , You cannot build iOS apps on windows or linux.Native iOS apps can only be built on macOS machine
+
+    With Expo, You can develop apps on windows or linux and run it in physical iphone
+
+
+    In the event that you require access to native android / ios code, Expo alloes you to eject your app and work with plaing RN Codebase.
+
+3 : Fist RN APP ( Using Expo ) 
+     Refer (https://reactnative.dev/docs/environment-setup)
+     * Install Node js
+     * Install VS code 
+
+     Create A Folder and open it in VS Code
+     
+     -> npx create-expo-app@latest HelloWorld
+       - cd HelloWorld
+	   - npm run android
+	   - npm run ios
+	   - npm run web
+
+	  package.json :
+	    -> has Dependencies/scripts and metadata
+	  (Check Video) 
+	  babel.config.js :
+
+	  app.json 
+	     ->has Configuration option for the project  
+	     -> These options alter the project behaviour during development , building ,submitting and updating the app
+
+	  App.js : 
+	     ->  Serves as the default screen for the project
+	     ->  It acts as the Root file when you start the development server with npm start
+	     -> 
+
+4 : Running	Expo APP (In Physical Device)
+     * ios simulator
+     * Android emulator
+
+    Download Expo GO
+    Scan QR
+    Phone and Mac should be on Same network
+    
+    navigate to app folder
+    cd HelloWorld
+    npm start / npx expo start
+
+5 : Running	Expo APP ( iPhone Simulator)
+        
+Download Xcode :(
+
+6 : Running Expo APP ( Android Studio)    
+    
+    https://developer.android.com/studio
+    * Standard setup step
+
+    Once the APP is opened 
+     -> More Settings -> Virtual Device Manager
+     -> Create device (Make sure it has playsoter ikon)
+
+     Click on a in VS code terminal will install Expo GO in your virtual device.
+
+7 : React Native Core Components :
+    https://reactnative.dev/docs/intro-react-native-components
+    React Navtive components :
+      -> Native compnents
+      -> Core components
+      -> Community components
+
+    React native does not incorporate DOM. So JSX Tags that we use in react wont work ( <div> <p>).
+
+    In Android/Ios , we use "view" for user interfaces
+
+    View :
+        -> Small rectangular element on screen that can display text, images, or respond user input
+     In Android
+ , : "View" are written in Kotlin or Java
+     In iOS : "View"   are written in Swift or Objective-C
+     RN : View are written in JS through React Components
+     At runtime, RN generates corresponding Android & ios Views for these components. 
+
+     We call these platform-backed components Native Components.
+     React Native comes with a set of essential, ready-to-use Native Components you can use to start building your app today. These are React Native's Core Components.
+
+     Community components : https://reactnative.directory/
+     
+
+     RN UI Components 
+     RN 			Android  		IOS          Web Analog
+     <view>         <ViewGroup>.     <UIView>    non scrolling <div>              
+     <Text>                                      <p>                              
+     <Image>									  <img>
+     <ScrollView>								 <div>
+     <TextInput>     							 <input type ="text">
+
+     import core components from react-native library
+     import {StyleSheet, Text , View } from "react-native"
+
+  8: View Component:
+     https://reactnative.dev/docs/components-and-apis
+     https://reactnative.dev/docs/view
+
+     The most fundamental component for building a UI, View is a container that supports layout with flexbox, style, some touch handling, and accessibility controls. View maps directly to the native view equivalent on whatever platform React Native is running on, whether that is a UIView, <div>, android.view, etc.
+
+	 View is designed to be nested inside other views and can have 0 to many children of any type
+
+
+    npx create-expo-app@latest CoreComponents --template blank@sdk-49
+     
+    View Compnent only occupies the space taken by its children.
+    flex : 1 -> takes up all available space in scren
+
+  9: Text Component
+  https://reactnative.dev/docs/text
+  A React component for displaying text.
+  Text supports nesting, styling, and touch handling.
+   
+  Read about MyAppText in the doc
+
+  10 : Image Component
+  https://reactnative.dev/docs/image
+  https://reactnative.dev/docs/imagebackground
+
+  Note that for network and data images, you will need to manually specify the dimensions of your image!
+
+  11 : Scroll View
+  https://reactnative.dev/docs/scrollview
+
+  Component that wraps platform ScrollView while providing integration with touch locking "responder" system.
+   ScrollViews must have a bounded height in order to work, since they contain unbounded-height children into a bounded container (via a scroll interaction). In order to bound the height of a ScrollView, either set the height of the view directly (discouraged) or make sure all parent views have bounded height. Forgetting to transfer {flex: 1} down the view stack can lead to errors here, which the element inspector makes quick to debug.
+
+  <ScrollView> vs <FlatList> - which one to use?
+
+  ScrollView -> Renders fully
+  FlatList -> Renders lazily
+
+  12 : Button
+  https://reactnative.dev/docs/button
+
+  A basic button component that should render nicely on any platform. Supports a minimal level of customization.
+
+If this Buttonton doesn't look right for your app, you can build your own button using Pressable
+
+ 13 : Pressable
+ https://reactnative.dev/docs/pressable
+
+ Pressable is a Core Component wrapper that can detect various stages of press interactions on any of its defined children.
+ 
+ Check the image in docs.
+  
+ If you want to create custom button , use Pressable 
+
+ 14 : Modal
+ https://reactnative.dev/docs/modal
+ The Modal component is a basic way to present content above an enclosing view.
+  
+ onRequestClose is called when back button is clicked
+
+
+ 15 : Status Bar
+ https://reactnative.dev/docs/statusbar
+ Component to control the app's status bar. The status bar is the zone, typically at the top of the screen, that displays the current time, Wi-Fi and cellular network information, battery level and/or other status icons.
+ 
+   barStyle -> text color of status bar
+
+ 16 : Activity Indicator
+ https://reactnative.dev/docs/activityindicator
+ Displays a circular loading indicator.
+
+  
+ 17 : Alert
+ https://reactnative.dev/docs/alert
+  
+ Development -> Apis. 
+
+ Use State variable for animating prop
+ Its a API that generate UI elements.
+
+ IN IOS You can specify any number of buttons
+ In Android , Its only 3
+
+ 18 : Custom components
+ Refer greet.js
+
+ We can create custom Reuable component like custom button , custom view etc...
+ 
+ 19 : Styling
+ 
+ https://reactnative.dev/docs/style
+
+ RN Doesnot use CSS for styling
+ You style using JS
+ names are written in camel case
+ Ex : backgroundColor instead of background-color
+
+
+ 20 : StyleSheet API
+
+
+
+
+
