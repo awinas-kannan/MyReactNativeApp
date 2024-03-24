@@ -11,8 +11,14 @@ import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
 import { LayoutCodeEvol } from './layout/26_CodeSetup';
+import { AlignContentLayout } from './layout/AlignContent';
+import { AlignItemsLayout } from './layout/AlignItems';
+import { AlignSelfLayout } from './layout/AlignSelf';
 import { Flex } from './layout/Flex';
+import { FlexBasisGrowShrink } from './layout/FlexBasisGrowShrink';
 import { FlexDirectionBasics } from './layout/FlexDirection';
+import FlexWrapLayout from './layout/FlexWrap';
+import RowGapAndColumnGap from './layout/Gaps';
 import { JustifyContentBasics } from './layout/JustifyContent';
 import { BoxModelRN } from './styles/BoxModel';
 import { BoxShadowRN } from './styles/BoxShadow';
@@ -68,8 +74,12 @@ export default function App() {
   //  <LayoutCodeEvol></LayoutCodeEvol>
   //  <Flex></Flex>
   //  <FlexDirectionBasics/>
-
-    <JustifyContentBasics></JustifyContentBasics>
-
+    // <JustifyContentBasics></JustifyContentBasics>
+    // <AlignItemsLayout></AlignItemsLayout>
+    // <AlignSelfLayout/>
+    // <AlignContentLayout/>
+    // <FlexWrapLayout/>
+    // <RowGapAndColumnGap/>
+    <FlexBasisGrowShrink/>
   );
 };
