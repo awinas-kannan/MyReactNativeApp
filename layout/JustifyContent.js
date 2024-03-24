@@ -58,10 +58,13 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 8,
         backgroundColor: 'aliceblue',
+        // flexDirection: 'row'
     },
     box: {
         width: 100,
         height: 100,
+        borderColor : 'coral',
+        borderWidth: 2
     },
     row: {
         flexDirection: 'row',
@@ -76,7 +79,7 @@ const styles = StyleSheet.create({
         marginHorizontal: '1%',
         marginBottom: 6,
         minWidth: '48%',
-        textAlign: 'center',
+        textAlign: 'center'
     },
     selected: {
         backgroundColor: 'coral',
