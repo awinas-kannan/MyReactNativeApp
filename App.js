@@ -11,6 +11,7 @@ import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
 import { LayoutCodeEvol } from './layout/26_CodeSetup';
+import AbsoluteAndRelativePositionLayout from './layout/AbsoluteAndRelative';
 import { AlignContentLayout } from './layout/AlignContent';
 import { AlignItemsLayout } from './layout/AlignItems';
 import { AlignSelfLayout } from './layout/AlignSelf';
@@ -82,7 +83,8 @@ export default function App() {
     // <FlexWrapLayout/>
     // <RowGapAndColumnGap/>
     // <FlexBasisGrowShrink/>
-    <WidthHeightBasics/>
+    // <WidthHeightBasics/>
+    <AbsoluteAndRelativePositionLayout/>
 
   );
 };
