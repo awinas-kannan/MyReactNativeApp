@@ -465,8 +465,15 @@ When wrapping lines, alignContent can be used to specify how the lines are place
  flexBasis : 0
  
  38 : relative and absolute layout
- 
- 
+
+ The position type of an element defines how it is positioned within its parent.
+
+absolute When positioned absolutely, an element doesn't take part in the normal layout flow. It is instead laid out independent of its siblings. The position is determined based on the top, right, bottom, and left values.
+{{{It does not align based on child.. its based on Parent}}}
+
+relative (default value) By default, an element is positioned relatively. This means an element is positioned according to the normal flow of the layout, and then offset relative to that position based on the values of top, right, bottom, and left. The offset does not affect the position of any sibling or parent elements.
+
+{{aligned based on siblings}}
 
 
 

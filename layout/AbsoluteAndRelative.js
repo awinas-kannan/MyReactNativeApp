@@ -36,10 +36,10 @@ const AbsoluteAndRelativePositionLayout = () => {
                 style={[
                     styles.box,
                     {
-                        top: 75,
-                        left: 75,
-                        position,
-                        backgroundColor: 'steelblue',
+                        top: 100,
+                        left: 100,
+                        // position,
+                        backgroundColor: 'grey',
                     },
                 ]}
             />
@@ -54,7 +54,7 @@ const PreviewLayout = ({
     selectedValue,
     setSelectedValue,
 }) => (
-    <View style={{ padding: 10, flex: 1 }}>
+    <View style={{ padding: 50, flex: 1 }}>
         <Text style={styles.label}>{label}</Text>
         <View style={styles.row}>
             {values.map(value => (
