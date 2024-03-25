@@ -36,8 +36,8 @@ const AbsoluteAndRelativePositionLayout = () => {
                 style={[
                     styles.box,
                     {
-                        top: 100,
-                        left: 100,
+                        top: 75,
+                        left: 75,
                         // position,
                         backgroundColor: 'grey',
                     },
