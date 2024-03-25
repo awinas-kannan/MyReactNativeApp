@@ -19,6 +19,7 @@ import { FlexBasisGrowShrink } from './layout/FlexBasisGrowShrink';
 import { FlexDirectionBasics } from './layout/FlexDirection';
 import FlexWrapLayout from './layout/FlexWrap';
 import RowGapAndColumnGap from './layout/Gaps';
+import WidthHeightBasics from './layout/HeightAndWidth';
 import { JustifyContentBasics } from './layout/JustifyContent';
 import { BoxModelRN } from './styles/BoxModel';
 import { BoxShadowRN } from './styles/BoxShadow';
@@ -80,6 +81,8 @@ export default function App() {
     // <AlignContentLayout/>
     // <FlexWrapLayout/>
     // <RowGapAndColumnGap/>
-    <FlexBasisGrowShrink/>
+    // <FlexBasisGrowShrink/>
+    <WidthHeightBasics/>
+
   );
 };
