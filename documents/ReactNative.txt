@@ -471,10 +471,72 @@ When wrapping lines, alignContent can be used to specify how the lines are place
 absolute When positioned absolutely, an element doesn't take part in the normal layout flow. It is instead laid out independent of its siblings. The position is determined based on the top, right, bottom, and left values.
 {{{It does not align based on child.. its based on Parent}}}
 
+When to use ? When you want something to be in precious position
+
 relative (default value) By default, an element is positioned relatively. This means an element is positioned according to the normal flow of the layout, and then offset relative to that position based on the values of top, right, bottom, and left. The offset does not affect the position of any sibling or parent elements.
 
 {{aligned based on siblings}}
 
+39 : Dynamic User Interface
+Currently our learning is based on iphone 14+ and pixel 8 pro
+Our app users wont all be using identical devices
+Device sizes may vary ranging from compact phones tp larger devices like ipads and androis tablets.
+
+Our app ui should be responsive in diff devices..
+
+On Same device , a user might opt for potraid mode other may opt for landscape mode
+
+40 : Dimension API
+
+Press Shift + I 
+Select i pad..
+Check if the expo is installed...
+
+Box is not look good in Ipad when compared to Iphone 15+
+
+Dimension :
+ -> Screen -> Entire physical display of the device (Include notch/ status bars / System NAV Bars)
+ -> Window -> Area occupied by APPs ui
+ 
+ Dimension API  has some drawbacks. that prevents it from using it fro creating Synamic user interface
+
+ 41 : Dimension API drawback
+  -> When the device orientation changes , width and height changes... But this will not update the Dimension APIs widht and height..
+
+  Update the orientation as default in app.json (to toggle b/w potrait and landscape)
+
+  Now the height & widht values will be changed ,but its not reflected...
+
+   Only when the device is restated. , the values are changed.. ( Click on the ios device and click R)
+   LOG  rendering  {"windowWidth": 932} {"windowHeight": 430}
+   LOG  rendering  {"windowWidth": 430} {"windowHeight": 932}
+
+   Use Use state...
+
+
+
+
+
+####################################################################################################################################################################################################################################
+Native CLI :
+ -> Install node & Watchman
+ -> Set Up java home
+
+
+
+
+React Native Check List :
+1) Create App With CLI
+2) Localization 
+3) Integrate CCM
+3) Impersonate (Later)
+4) Fluffy (Need to Disucss)
+5) Redux
+6) Fontsetup
+7) Splash Screen setup (Later)
+
+Pfed Onboarding Request.. Dev onboarding...
+Tc(Touch Computer) - 52 72 ..
 
 
 

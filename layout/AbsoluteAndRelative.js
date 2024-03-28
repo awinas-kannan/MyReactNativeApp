@@ -38,7 +38,7 @@ const AbsoluteAndRelativePositionLayout = () => {
                     {
                         top: 75,
                         left: 75,
-                        // position,
+                        position,
                         backgroundColor: 'grey',
                     },
                 ]}
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 8,
         backgroundColor: 'aliceblue',
-        minHeight: 200,
+        // minHeight: 200,
     },
     box: {
         width: 50,

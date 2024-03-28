@@ -10,6 +10,9 @@ import { ScrollViewRN } from './corecomponents/ScollViewComponent';
 import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
+import { DynamicUIDimensionAPIUseState } from './dimensions/DynamicUIDimensionWithUseState';
+import { DynamicUIDimensionAPI } from './dimensions/DynamicUIWithDimensionAPI';
+import { DynamicUI } from './dimensions/DynamicUserInterface';
 import { LayoutCodeEvol } from './layout/26_CodeSetup';
 import AbsoluteAndRelativePositionLayout from './layout/AbsoluteAndRelative';
 import { AlignContentLayout } from './layout/AlignContent';
@@ -84,7 +87,15 @@ export default function App() {
     // <RowGapAndColumnGap/>
     // <FlexBasisGrowShrink/>
     // <WidthHeightBasics/>
-    <AbsoluteAndRelativePositionLayout/>
+    // <AbsoluteAndRelativePositionLayout/>
+
+    /*
+    * Dynamic UI
+    */
+ 
+    // <DynamicUI/>
+    // <DynamicUIDimensionAPI/>
+    <DynamicUIDimensionAPIUseState></DynamicUIDimensionAPIUseState>
 
   );
 };
