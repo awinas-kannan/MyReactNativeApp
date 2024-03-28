@@ -1,3 +1,4 @@
+import { Alert } from 'react-native';
 import { ActivityIndicatorRN } from './corecomponents/ActivityIndicatorComponent';
 import { AlertAPIComponent } from './corecomponents/AlertComponent';
 import { ButtonRN } from './corecomponents/ButtonComponent';
@@ -10,6 +11,7 @@ import { ScrollViewRN } from './corecomponents/ScollViewComponent';
 import { StatusBarRN } from './corecomponents/StatusBarComponent';
 import { TextCompRN } from './corecomponents/TextComponent';
 import { ViewCompRN } from './corecomponents/ViewComponent';
+import SafeAreaViewComp from './corecomponents/ios/SafeAreaViewComp';
 import { DynamicUIDimensionAPIUseState } from './dimensions/DynamicUIDimensionWithUseState';
 import { DynamicUIDimensionAPI } from './dimensions/DynamicUIWithDimensionAPI';
 import { DynamicUI } from './dimensions/DynamicUserInterface';
@@ -26,6 +28,9 @@ import FlexWrapLayout from './layout/FlexWrap';
 import RowGapAndColumnGap from './layout/Gaps';
 import WidthHeightBasics from './layout/HeightAndWidth';
 import { JustifyContentBasics } from './layout/JustifyContent';
+import PlatformSafeAreaViewComp from './otherconcepts/1.PlatFormSpecificCode';
+import PlatformSafeAreaViewComp_2 from './otherconcepts/2.PlatFormSpecificCode';
+import { PlatformButton } from './otherconcepts/platforms/PlatformButton';
 import { BoxModelRN } from './styles/BoxModel';
 import { BoxShadowRN } from './styles/BoxShadow';
 import FlexDimensionsBasics, { FixedDimensionsBasics, PercentageDimensionsBasics } from './styles/HeightAndWidthStyle';
@@ -77,9 +82,9 @@ export default function App() {
     /*
     * FlexBox
     */
-  //  <LayoutCodeEvol></LayoutCodeEvol>
-  //  <Flex></Flex>
-  //  <FlexDirectionBasics/>
+    //  <LayoutCodeEvol></LayoutCodeEvol>
+    //  <Flex></Flex>
+    //  <FlexDirectionBasics/>
     // <JustifyContentBasics></JustifyContentBasics>
     // <AlignItemsLayout></AlignItemsLayout>
     // <AlignSelfLayout/>
@@ -93,11 +98,16 @@ export default function App() {
     /*
     * Dynamic UI
     */
- 
+
     // <DynamicUI/>
     // <DynamicUIDimensionAPI/>
     // <DynamicUIDimensionAPIUseState></DynamicUIDimensionAPIUseState>
-    <UseWindowDimensions/>
+    // <UseWindowDimensions/>
+    // <SafeAreaViewComp/>
+
+    // <PlatformSafeAreaViewComp/>
+    // <PlatformSafeAreaViewComp_2></PlatformSafeAreaViewComp_2>
+    <PlatformButton title = 'Platform Button' onPress = {() => Alert.alert('Pressed')}></PlatformButton>
 
   );
 };

@@ -3,6 +3,8 @@ import { View, StyleSheet, Text, useWindowDimensions } from 'react-native';
 
 const UseWindowDimensions = () => {
     const { height, width, scale, fontScale } = useWindowDimensions();
+    // const height = useWindowDimensions().height;
+    // const width = useWindowDimensions().width;
     console.log({ height, width, scale, fontScale });
     return (
         <View style={styles.container}>
