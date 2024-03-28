@@ -513,14 +513,57 @@ Dimension :
 
    Use Use state...
 
+ 42 : useWindowDimensions
+ https://reactnative.dev/docs/usewindowdimensions
+ useWindowDimensions automatically updates all of its values when screen size or font scale changes. You can get your application window's width and height like so:
+
+ const {height, width} = useWindowDimensions();
+ 
+
+
+ 43 : SafeAreaView
+
+ 44 : Perform Specific code
 
 
 
-
-####################################################################################################################################################################################################################################
+########################################################################################################################################################################################################################
 Native CLI :
+ https://reactnative.dev/docs/environment-setup
  -> Install node & Watchman
  -> Set Up java home
+ -> Remove Walmart related stuff from .npmrc
+ -> npx react-native@latest init MyReactNativeCLIWM
+ -> To Run IN VPN
+    -> Setup 
+       -> Modify the distributionUrl in android/gradle-wrapper.properties
+       -> distributionUrl=https://repository.walmart.com/repository/gradle_distros/gradle-8.3-all.zip
+
+       -> Modify repositories in build.gradle
+        google()
+        mavenCentral {
+            setUrl("https://repository.walmart.com/content/repositories/public")
+        }
+ 
+        maven { url "https://repository.walmart.com/content/repositories/atlassian-public/" }
+        maven { url "https://repository.walmart.com/content/groups/public" }
+        maven { url "https://repository.walmart.com/content/repositories/pangaea_snapshots/" }
+        maven { url "https://repository.walmart.com/content/repositories/pangaea_releases/" }
+        maven { url 'https://repo.wal-mart.com/content/repositories/snapshots' }
+        maven { url "https://repo.wal-mart.com/content/repositories/walmart" }
+        maven { url "https://repository.walmart.com/content/repositories/jcenter" }
+        maven { url "https://repository.walmart.com/content/repositories/central/" }
+        jcenter {
+            setUrl("https://repository.walmart.com/content/repositories/jcenter")
+        } 
+
+-> Start metro :: npm start
+-> Open Android Studio & Start the mobile
+-> npm run android
+
+ ** npx react-native start --experimental-debugger ** 
+
+########################################################################################################################################################################################################################
 
 
 

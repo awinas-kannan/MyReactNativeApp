@@ -13,6 +13,7 @@ import { ViewCompRN } from './corecomponents/ViewComponent';
 import { DynamicUIDimensionAPIUseState } from './dimensions/DynamicUIDimensionWithUseState';
 import { DynamicUIDimensionAPI } from './dimensions/DynamicUIWithDimensionAPI';
 import { DynamicUI } from './dimensions/DynamicUserInterface';
+import UseWindowDimensions from './dimensions/UseWindowDimensions';
 import { LayoutCodeEvol } from './layout/26_CodeSetup';
 import AbsoluteAndRelativePositionLayout from './layout/AbsoluteAndRelative';
 import { AlignContentLayout } from './layout/AlignContent';
@@ -95,7 +96,8 @@ export default function App() {
  
     // <DynamicUI/>
     // <DynamicUIDimensionAPI/>
-    <DynamicUIDimensionAPIUseState></DynamicUIDimensionAPIUseState>
+    // <DynamicUIDimensionAPIUseState></DynamicUIDimensionAPIUseState>
+    <UseWindowDimensions/>
 
   );
 };
